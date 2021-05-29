@@ -22,6 +22,7 @@ int findPivotBinarySearch(int arr[], int low, int high) {
     if(low<mid && arr[mid-1]>arr[mid]){
         return mid-1;
     }
+    
     if(arr[low]>=arr[mid]){
         return findPivotBinarySearch(arr,low,mid-1);
     } 

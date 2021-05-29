@@ -15,8 +15,8 @@ Approach:
 4. After the pivot is found out divide the array in two sub-arrays.
 5. Now the individual sub – arrays are sorted so the element can be searched using Binary Search.
 */
-class Solution {
-    public:
+#include<iostream>
+using namespace std;
     int binarySearch(int arr[], int left, int right, int key){
         if(right<left){
             return -1;
@@ -34,7 +34,6 @@ class Solution {
     }
     
     // ignore this func
-    public:
     int findPivotLinearSearch(int arr[], int l, int h) {
         for(int i=l;i<h;i++){
             if(arr[i]>arr[i+1]){
@@ -44,7 +43,6 @@ class Solution {
         return -1;
     }
     
-    public:
     int findPivotBinarySearch(int arr[], int low, int high){
         if(high<low){
             return -1;
@@ -66,7 +64,6 @@ class Solution {
         return findPivotBinarySearch(arr,mid+1,high);
     }
     
-    public:
     int findElement(int arr[], int l, int h, int key){
     //complete the function here
 
@@ -92,7 +89,6 @@ class Solution {
             return binarySearch(arr,pivot+1,h,key);
         }
     }
-}
 
 int main() {
     int t;
@@ -106,7 +102,7 @@ int main() {
         }
         int k;
         cin>>k;
-        cout<<findElement(arr,0,n-1,key)<<endl;
+        cout<<findElement(arr,0,n-1,k)<<endl;
     }
 }
 
